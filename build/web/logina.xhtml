@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
+<head>
+  
+<meta charset="UTF-8" />
+  
+<title>Ram-Fashion - Sign up|Login Form</title>
+  <link rel="stylesheet" href="./css/style_1.css" />
+</head>
+<body><!-- partial:index.partial.html -->
+	
+<title>Slide Navbar</title>
+	<link rel="stylesheet" type="text/css" href="slide navbar style.css" /><link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&amp;display=swap" rel="stylesheet" />
+	
+<div class="main">  	
+		<input type="checkbox" id="chk" aria-hidden="true" />
+			
+<div class="signup">
+				<h:form enctype="multipart/form-data" >
+					<label for="chk" aria-hidden="true">Sign up</label>
+                                        
+                                        <h:inputText id="name" value="#{RFJSFBean.admin_name}" pt:placeholder="User Name"/>
+                                        <h:inputText id="email" value="#{RFJSFBean.admin_email}" pt:placeholder="Email"/>
+                                        <h:inputText id="password" value="#{RFJSFBean.admin_pass}" pt:placeholder="Password"/>
+                                        <h:inputFile id="fileInput" value="#{RFJSFBean.admin_img}"/>
+                                        <h:commandButton value="Submit" action="#{RFJSFBean.insertadmin()}" pt:placeholder="Sign up"  style="background-color:#573b8a;width: 60%;
+                                        height: 40px;
+                                        margin: 10px auto;
+                                        justify-content: center;
+                                        display: block;
+                                        color: #fff;
+                                        background: #573b8a;
+                                        font-size: 1em;
+                                        font-weight: bold;
+                                        margin-top: 20px;
+                                        outline: none;
+                                        border: none;
+                                        border-radius: 5px;
+                                        transition: .2s ease-in;
+                                        cursor: pointer;" /> 
+                                        
+<!--					<input type="text" name="txt" placeholder="User name" required="" />
+					<input type="email" name="email" placeholder="Email" required="" />
+					<input type="password" name="pswd" placeholder="Password" required="" />
+                                        <input type="file" name="file" placeholder="img" required=""/>
+                                        <button>Sign up</button>-->
+                                        
+ 
+
+				</h:form>
+			</div>
+                <br/>
+<div class="login">
+				<h:form>
+					<label for="chk" aria-hidden="true">Login</label>
+<!--					<input type="email" name="email" placeholder="Email" required="" />
+					<input type="password" name="pswd" placeholder="Password" required="" />
+					<button>Login</button>-->
+
+                                        <h:inputText id="email" value="#{RFJSFBean.admin_email}" pt:placeholder="Email"/>
+                                        <h:inputText id="password" value="#{RFJSFBean.admin_pass}" pt:placeholder="Password"/>
+                                       
+                                        <h:commandButton value="Submit" action="#{RFJSFBean.checkadmin()}" pt:placeholder="Login"  style="background-color:#573b8a;width: 60%;
+                                        height: 40px;
+                                        margin: 10px auto;
+                                        justify-content: center;
+                                        display: block;
+                                        color: #fff;
+                                        background: #573b8a;
+                                        font-size: 1em;
+                                        font-weight: bold;
+                                        margin-top: 20px;
+                                        outline: none;
+                                        border: none;
+                                        border-radius: 5px;
+                                        transition: .2s ease-in;
+                                        cursor: pointer;" /> 
+
+                                        
+				</h:form>
+			</div>
+	</div>
+  
+</body></html><!-- partial -->
